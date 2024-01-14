@@ -1,10 +1,18 @@
-# Backend README
+# Task Management App Backend
 
-This is the backend for login And Register user, built with Node.js, Express, MongoDB, Mongoose, JWT authentication, and bcrypt.
+This project is the backend API for a task management application. It provides endpoints for user registration, authentication, task creation, updating, and deletion, as well as user profile management.
 
-## Project Overview
+## Technologies Used
 
-Briefly describe the purpose and functionality of your project.
+- **Node.js**
+- **Express.js**
+- **MongoDB** (Assuming you are using MongoDB based on the provided code)
+- **Cors** (for handling Cross-Origin Resource Sharing)
+- **Cookie-parser** (for handling cookies)
+
+
+
+
 
 ## Prerequisites
 
@@ -36,7 +44,7 @@ Follow these steps to set up and run the project locally:
    Create a `.env` file in the root directory and provide the necessary variables, such as:
 
     ```env
-    port=3000
+    port=8080
     mongoURL=<your_mongodb_uri>
     secret=<your_jwt_secret>
     ```
@@ -59,21 +67,29 @@ Describe the available API endpoints, including their routes, methods, and requi
 
 ### Example:
 
-- **POST /api/user/register**
+- **POST /users/register**
   - Registers a new user.
-  - Requires a JSON payload with `name`, `username`, `email`, `password`, and `phonenumber`.
+  - Requires a JSON payload with `name`, `email`, `password`
   - Returns a success message or error.
 
-- **POST /api/user/login**
+- **POST /users/login**
   - Logs in a user.
   - Requires a JSON payload with `email` and `password`.
   - Returns a JWT token on successful login.
+  - 
 
-- **POST /api/user/logout**
+- **POST /users/logout**
   - Logs out a user.
   - Requires a valid JWT token.
   - Invalidates the token.
-
+- **Create profile**  
+  - GET /users/profile - Get the user's profile(requires authentication)
+  - PUT /users/profile - Edit the user's profile(requires authentication)
+- **Task Management**
+  - POST /api/tasks - Create a new task (requires authentication)
+  - GET /api/tasks - Get all tasks for the authenticated user
+  - PUT /api/tasks/:taskId - Update a task (requires authentication)
+  - DELETE /api/tasks/:taskId - Delete a task (requires authentication)  
 ## Technologies Used
 
 - Node.js

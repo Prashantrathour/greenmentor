@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Task Management App - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This frontend application is part of a task management system that allows users to log in, sign up, create tasks, update and delete tasks, and maintain their profiles. Users can also upload images for their profiles.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- **Frontend:**
+  - React
+  - React Router
+  - Redux (for state management)
+  - Tailwind CSS (for styling)
+  - Axios (for handling HTTP requests)
+  - React Toastify (for displaying notifications)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Before running the application, make sure you have the following installed:
 
-### `npm test`
+- Node.js
+- npm (Node Package Manager)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To get started with the frontend application, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository.
+2. Navigate to the frontend project folder.
+3. Install dependencies: `npm install`.
+4. Start the development server: `npm start`.
+## How to Run Locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/your-username/task-management-app.git
+   cd task-management-app
+    npm install
+    npm start
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Features
+ - User authentication (Login and Register)
+ - Task Management (Create, Update, Delete tasks)
+ - User Profile Management (Update profile, Upload image)
+### User Authentication
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Users can log in and sign up.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Profile Page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- View and update user profiles.
+- Upload profile images.
 
-## Learn More
+### Task Management
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Create, edit, and delete tasks.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Folder Structure
 
-### Code Splitting
+The project's folder structure is organized as follows:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `src`: Source code of the React application.
+  - `components`: React components.
+  - `pages`: React Pages.
+  - `redux`: Redux state management.
+  - `styles`: Stylesheets using Tailwind CSS.
+  - ...
+### Routes
+  - / - Home
+  - /login - Login
+  - /register - Register
+  - /profile - User Profile Page
+## Dependencies
 
-### Analyzing the Bundle Size
+Major dependencies used:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `react`: JavaScript library for building user interfaces.
+- `redux`: State management library.
+- `tailwindcss`: Utility-first CSS framework.
 
-### Making a Progressive Web App
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The frontend is deployed using [Netlify](https://www.netlify.com/).
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions to the frontend project are welcome. Please follow the contribution guidelines.
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [Your License] License.
