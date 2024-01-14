@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import { errorAlert, succesAlert } from "../Notification";
@@ -10,6 +10,7 @@ import {
   fetchUsersFailure,
   fetchUsersRequest,
   fetchUsersSuccess,
+  isAuth,
   login,
 } from "../redux/user/action";
 function Login() {
@@ -52,9 +53,13 @@ function Login() {
       password: "",
     });
   };
-
+useEffect(()=>{
+  if(localStorage.getItem("token")){
+    dispatch(isAuth(true))
+  }
+})
   return (
-    <div className=" h-screen w-full border bg-black flex justify-center items-center">
+    <div className="w-full  flex justify-center items-center">
       <div className="sm:px-10 px-2 w-full sm:w-1/2 lg:w-1/2 xl-1/3  transition-all">
         <ToastContainer />
         <h1 className="font-mono text-white p-4  text-2xl font-semibold">

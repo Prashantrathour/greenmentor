@@ -5,7 +5,7 @@ const { UserProfileModel } = require("../model/Profile.modle");
 
 const registerController = {
   registerUser: async (req, res) => {
-    const { email, password } = req.body;
+    const { email, password ,name} = req.body;
 
     try {
       let userExist = await UserModel.findOne({ email });
@@ -34,6 +34,7 @@ const registerController = {
 
         const user = new UserModel({
           email,
+          name,
           password: hash,
         });
 
@@ -41,7 +42,7 @@ const registerController = {
           await user.save();
           const userProfile = new UserProfileModel({
             userId: user._id,
-            email,
+            email,name
           });
 
           await userProfile.save()

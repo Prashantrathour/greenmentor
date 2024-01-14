@@ -20,7 +20,7 @@ function Home() {
   }
 
   useEffect(() => {
-    // Check for changes in the msg variable
+
     if (!localStorage.getItem("token")) {
       navigate("/login");
       return
@@ -44,7 +44,7 @@ function Home() {
     <button onClick={()=>setcreateTaskModelOpen(!createTaskModelOpen)} className="flex gap-1 justify-center items-center text-center p-2 px-3 border rounded-2xl bg-lime-500">CreateTask <ImPlus/></button>
   </div>
       <div className="flex h-full w-full">
-        {/* Fixed CreateTask sidebar */}
+       
        {createTaskModelOpen? <div >
           <CreateTask createTaskModelOpen={createTaskModelOpen} setcreateTaskModelOpen={setcreateTaskModelOpen} />
         </div>:""}

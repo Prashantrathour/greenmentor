@@ -1,13 +1,27 @@
+const { mongoose } = require("mongoose");
 const { UserProfileModel } = require("../model/Profile.modle");
 const { UserModel } = require("../model/user.model");
-
+const { ObjectId } = mongoose.Types;
 const profileControllers = {
   getUserProfile: async (req, res) => {
     try {
       const userId = req.body.userId;
 
-      const userProfile = await UserProfileModel.findOne({ userId });
-      if (!userProfile) {
+      const userProfile = await UserProfileModel.aggregate([
+        {
+          $match: {userId:new ObjectId(userId) },
+        },
+        {
+          $lookup: {
+            from: 'tasks', 
+            localField: 'userId',
+            foreignField: 'userId',
+            as: 'tasks',
+          },
+        },
+        
+      ]);;
+      if (!userProfile.length) {
         return res.status(404).json({ error: "User profile not found." });
       }
 
@@ -54,10 +68,23 @@ const profileControllers = {
           { email },
           { new: true, runValidators: true }
         );
-
+        const userProfile = await UserProfileModel.aggregate([
+          {
+            $match: {userId:new ObjectId(userId) },
+          },
+          {
+            $lookup: {
+              from: 'tasks', 
+              localField: 'userId',
+              foreignField: 'userId',
+              as: 'tasks',
+            },
+          },
+          
+        ]);;
         res.json({
           message: "User profile updated successfully",
-          userProfile: updatedUserProfile,
+          userProfile
         });
       } catch (updateError) {
         if (updateError.name === 'ValidationError') {

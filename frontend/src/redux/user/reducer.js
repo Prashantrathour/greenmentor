@@ -1,8 +1,8 @@
-import { POST_USER_ERROR, POST_USER_REQUEST, POST_USER_SUCCESS } from "./actiontype";
+import { AUTH, POST_USER_ERROR, POST_USER_REQUEST, POST_USER_SUCCESS } from "./actiontype";
 
   
   const initialState = {
-    isLogin: "",
+    isLogin: false,
     isLoading: false,
     isError: false,
     token: null,
@@ -14,6 +14,8 @@ import { POST_USER_ERROR, POST_USER_REQUEST, POST_USER_SUCCESS } from "./actiont
     switch (type) {
       case POST_USER_REQUEST:
         return { ...state, isLoading: true, isError: false,msg:"",token:null }; 
+      case AUTH:
+        return { ...state, isLoading: true, isError: false,msg:"",token:null,isLogin:payload }; 
   
       case POST_USER_SUCCESS:
        
