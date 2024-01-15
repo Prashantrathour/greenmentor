@@ -26,7 +26,7 @@ Follow these steps to set up and run the project locally:
 1. Clone the repository:
 
     ```bash
-    git clone  Prashantrathour/greenmentor
+    repo clone Prashantrathour/greenmentor
     ```
 
 2. Install dependencies:
