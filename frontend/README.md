@@ -69,6 +69,13 @@ The project's folder structure is organized as follows:
   - `redux`: Redux state management.
   - `styles`: Stylesheets using Tailwind CSS.
   - ...
+ ## SCREENSHORTS
+ ![Screenshot (70)](https://github.com/Prashantrathour/greenmentor/assets/112960345/cd291ce4-f535-4f66-b253-18643d0d1527)
+![Screenshot (69)](https://github.com/Prashantrathour/greenmentor/assets/112960345/fe2d63b7-3568-4100-8233-c8f2c7a03827)
+![Screenshot (73)](https://github.com/Prashantrathour/greenmentor/assets/112960345/14259651-7ef8-41ba-9040-4598a0577075)
+![Screenshot (72)](https://github.com/Prashantrathour/greenmentor/assets/112960345/36598b94-2cc3-4892-9d13-2a7e8d16093d)
+![Screenshot (71)](https://github.com/Prashantrathour/greenmentor/assets/112960345/f4949ee6-4f70-440b-b24b-a9d4ce664397)
+
 ### Routes
   - / - Home
   - /login - Login
