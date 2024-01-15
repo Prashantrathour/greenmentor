@@ -8,12 +8,9 @@ This project is the backend API for a task management application. It provides e
 - **Express.js**
 - **MongoDB** (Assuming you are using MongoDB based on the provided code)
 - **Cors** (for handling Cross-Origin Resource Sharing)
+- **JWT Token** (User Authentication)
 - **Cookie-parser** (for handling cookies)
-
-
-
-
-
+-  bcrypt for password hashing
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -29,13 +26,13 @@ Follow these steps to set up and run the project locally:
 1. Clone the repository:
 
     ```bash
-    git clone <repository_url>
+    git clone  Prashantrathour/greenmentor
     ```
 
 2. Install dependencies:
 
     ```bash
-    cd <project_directory>
+    cd greenmentor
     npm install
     ```
 
@@ -47,15 +44,16 @@ Follow these steps to set up and run the project locally:
     port=8080
     mongoURL=<your_mongodb_uri>
     secret=<your_jwt_secret>
+    refreshSecret=<your_jwt_secret>
     ```
 
 4. Run the application:
 
     ```bash
-    npm start
+    npm run server
     ```
 
-    The server will be running at `http://localhost:3000` or the specified port.
+    The server will be running at `http://localhost:8080` or the specified port.
 
 ## Project Structure
 
@@ -90,14 +88,7 @@ Describe the available API endpoints, including their routes, methods, and requi
   - GET /api/tasks - Get all tasks for the authenticated user
   - PUT /api/tasks/:taskId - Update a task (requires authentication)
   - DELETE /api/tasks/:taskId - Delete a task (requires authentication)  
-## Technologies Used
 
-- Node.js
-- Express
-- MongoDB
-- Mongoose
-- JWT (JSON Web Tokens) for authentication
-- bcrypt for password hashing
 
 ## License
 
