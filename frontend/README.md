@@ -5,6 +5,7 @@
 This frontend application is part of a task management system that allows users to log in, sign up, create tasks, update and delete tasks, and maintain their profiles. Users can also upload images for their profiles.
 ## Deploy
    [Frontend](https://greenmentor-app.netlify.app/)
+   [Backend](https://greenmentor-api-6sd2.onrender.com/)
 ## Technologies Used
 
 - **Frontend:**
