@@ -3,7 +3,8 @@
 ## Overview
 
 This frontend application is part of a task management system that allows users to log in, sign up, create tasks, update and delete tasks, and maintain their profiles. Users can also upload images for their profiles.
-
+## Deploy
+   [Frontend](https://greenmentor-app.netlify.app/)
 ## Technologies Used
 
 - **Frontend:**
@@ -36,8 +37,8 @@ To get started with the frontend application, follow these steps:
    ```bash
    git clone https://github.com/Prashantrathour/greenmentor.git
    cd greenmentor
-    npm install
-    npm start
+   npm install
+   npm start
 
 
 ## Features
@@ -82,7 +83,7 @@ Major dependencies used:
 
 ## Deployment
 
-The frontend is deployed using [Netlify](https://www.netlify.com/).
+The frontend is deployed using [Netlify](https://greenmentor-app.netlify.app/).
 
 ## Contributing
 
